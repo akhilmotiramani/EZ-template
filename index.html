@@ -6,6 +6,27 @@
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
+  <style>.slideshow-container {
+    position: relative;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+  
+  .slide {
+    display: none;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Add animation styles */
+  @keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  </style>
 </head>
 <body>
   <!-- Start of Navigation code -->
@@ -20,9 +41,22 @@
   <article>
     <h1>Hello!</h1>
     <p>Welcome to my site! My name is Akhil Motiramani, and I am a current sophomore at UNC studying Computer Science. I am minoring in Data Science, and this is my first class at UNC as I am a transfer student! I am from Cary, NC, and along with my three other family members, I have a pet bird named Rio. Before moving to North Carolina in 2011, I used to live in Boston, Massachusetts, and living in both states has given me a very unique experience.</p>
-    <img class="center" src="akhil.jpg" alt="Akhil Motiramani in a suit smiling at the camera with a background of trees">
-  </article>
+    <!-- <img class="center" src="akhil.jpg" alt="Akhil Motiramani in a suit smiling at the camera with a background of trees"> -->
 
+  <div class="slideshow-container">
+    <div class="slide">
+      <img src="akhil1.JPG" alt="Slide 1">
+    </div>
+    <div class="slide">
+      <img src="akhil2.jpg" alt="Slide 2">
+    </div>
+    <div class="slide">
+      <img src="akhil3.JPG" alt="Slide 3">
+    </div>
+  </div>
+</article>
+
+  
   <footer>
     <p>&copy; Akhil Motiramani. All rights reserved.</p>
     <p id="modified">Page last modified on: </p> <!-- Add the prefix "Page last modified on: " -->
@@ -31,5 +65,24 @@
       document.getElementById("modified").innerHTML += lastModified; // Append the last modified date
     </script>
   </footer>
+  <script>
+    var slides = document.getElementsByClassName('slide');
+    var slideIndex = 0;
+  
+    function showSlide() {
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+      slides[slideIndex - 1].style.display = 'block';
+      setTimeout(showSlide, 2500); // Change slide every 2.5 seconds
+    }
+  
+    showSlide();
+  </script>
+  
 </body>
 </html>
