@@ -23,47 +23,64 @@
     <h1>Interests</h1>
     <p>In my free time, I find ways to keep myself busy in order to continue learning or keeping fit. Below is a list of my interests!</p>
 
-
-
-
           <style>
             .company-name {
               font-size: 1.2em; /* Adjust the font size as desired */
             }
           </style>
           
-
-          <ul>
-            <li><span class="company-name">Going to the Gym</span><br>Here is one of the playlists I listen to in the Gym!</li>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5Mxu1VQAyrQs245A3emQ0I?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>    
-            <ul>
-                <li><span class="company-name">Running my Side business</span><br><span id="demo">Can you guess what it is?</span></li>
+          <div style="display: flex;">
+            <div style="width: 50%;">
+              <ul>
+                <span class="company-name">Going to the Gym</span><br>Here is one of the playlists I listen to in the Gym!
               </ul>
-              <button type="button" onclick='document.getElementById("demo").innerHTML = "DJ Services"'>Dog Sitting, DJ Services, or Landscaping?</button>
+            </div>
+            <div style="width: 50%;">
+              <div style="padding-top: 10px;">
+                <iframe style="border-radius: 12px;" src="https://open.spotify.com/embed/playlist/5Mxu1VQAyrQs245A3emQ0I?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+              </div>
+            </div>
+          </div>
 
-            <li><span class="company-name">Travelling with my friends/family</span><br>Picture from my most recent trip to California 7/8 to 7/15</li>
-            <li><span class="company-name">Learning new coding languages </span><br>Year-round Finance and Analytics Intern</li>
-            <li><span class="company-name">Trying new resturants </span><br>Year-round Finance and Analytics Intern</li>
-            <li><span class="company-name">Going to concerts </span><br>Year-round Finance and Analytics Intern</li>
-            <li><span class="company-name">Taking pictures of nature</span><br>Year-round Finance and Analytics Intern</li>
-
-
-
-          </ul>
+          <div style="display: flex;">
+            <div style="width: 50%;">
+              <ul>
+                <span class="company-name">Running my Side business</span><br>
+                <span id="demo">Can you guess what it is?</span>
+              </ul>
+              <button type="button" onclick='document.getElementById("demo").innerHTML = "DJ Services"; showImage();'>Dog Sitting, DJ Services, or Landscaping?</button>
+            </div>
+            <div id="imageContainer" style="width: 50%; display: none;">
+              <img src="images/akhil2.jpg" alt="Akhil Motiramani standing against a wall">
+            </div>
+          </div>
           
+          <script>
+            function showImage() {
+              var imageContainer = document.getElementById("imageContainer");
+              imageContainer.style.display = "block";
+            }
+          </script>
+         
+         <div style="display: flex;">
+          <div style="width: 50%;">
+            <ul>
+              <span class="company-name">Travelling with friends and family</span><br>Here is a picture from my most recent trip: California from 7/8 - 7/15
+            </ul>
+          </div>
+          <div style="width: 50%;">
+            <div style="padding-top: 10px;">
+              <img src="akhil3.jpg" alt="Description of the image">
+            </div>
+          </div>
+        </div>
+        
+        <img src="images/akhil2.jpg" alt="Akhil Motiramani standing against a wall">
 
-    
-    
 
-    <!-- <img class="center" src="akhil.jpg" alt="Akhil Motiramani in a suit smiling at the camera with a background of trees"> -->
 
-    
-    <p >Aside from school, I run a side business. </p>
-    
 
 </article>
-
-  
   <footer>
     <p>&copy; Akhil Motiramani. All rights reserved.</p>
     <p id="modified">Page last modified on: </p> <!-- Add the prefix "Page last modified on: " -->
@@ -75,9 +92,6 @@
   <script>
     var slides = document.getElementsByClassName('slide');
     var slideIndex = 0;
-  
-  
   </script>
-  
 </body>
 </html>
