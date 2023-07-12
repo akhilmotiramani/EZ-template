@@ -1,13 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title> Akhil Motiramani's Page | Classes Page </title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-  <style>
-    .course-container {
+  <title> Akhil Motiramani's Page | Classes Page </title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  
+</head>
+<body>
+  <!-- Start of Navigation code -->
+  <ul class="topnav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a class ="active" href="classes.html">Classes</a></li>
+    <li><a href="interests.html">Interests</a></li>
+  </ul>
+  <!-- End of Navigation code -->
+
+  <article>
+    <h1>Academic History</h1>
+    <p>I am a sophomore tranfer to UNC Chapel Hill this year! My freshman year was spent at UNC Charlotte. Below are the classes I have taken so far as well as those I have signed up for this year!</p>
+
+    <style>
+      .company-name {
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+    
+      h2 {
+        font-size: 1.5em;
+        color: #4B9CD3;
+      }
+    
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+    
+      li {
+        margin-bottom: 1em;
+      }
+      .course-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -37,39 +71,66 @@
       color: #4B9CD3;
       font-weight: bold;
     }
-  </style>
-</head>
-<body>
-      <!-- Start of Navigation code -->
-  <ul class="topnav">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a  class="active" href="classes.html">Classes</a></li>
-    <li><a href="interests.html">Interests</a></li>
-  </ul>
-  <!-- End of Navigation code -->
 
-  <div class="course-container">
-    <div class="course-card">
-      <h3 class="course-title">Course 1</h3>
-      <p class="course-description">This is the description for Course 1.</p>
-      <a class="course-link" href="#">View Course</a>
-    </div>
+    </style>
+    
+    <div class="course-container">
+      <div class="course-card">
+        <h3 class="course-title">Intro to Programming</h3>
+        <p class="course-description">Teaches the basics of Java and how to write understandable code.</p>
+        <a class="course-link" href="#">View Course</a>
+      </div>
+  
+      <div class="course-card">
+        <h3 class="course-title">Calculus 1, 2 & 3 </h3>
+        <p class="course-description">All three levels taught me critical thinking as well as how to deal with multi-variables.</p>
+        <a class="course-link" href="#">View Course</a>
+      </div>
+  
+      <div class="course-card">
+        <h3 class="course-title">Economics of Social Issues</h3>
+        <p class="course-description">High level overview of social issues faced by the country and their economic impact.</p>
+        <a class="course-link" href="#">View Course</a>
+      </div>
 
-    <div class="course-card">
-      <h3 class="course-title">Course 2</h3>
-      <p class="course-description">This is the description for Course 2.</p>
-      <a class="course-link" href="#">View Course</a>
-    </div>
+      <div class="course-card">
+        <h3 class="course-title">Writing and Inquiry</h3>
+        <p class="course-description">Teaches how to effectively research topics and write strong papers.</p>
+        <a class="course-link" href="#">View Course</a>
+      </div>
 
-    <div class="course-card">
-      <h3 class="course-title">Course 3</h3>
-      <p class="course-description">This is the description for Course 3.</p>
-      <a class="course-link" href="#">View Course</a>
-    </div>
+      <div class="course-card">
+        <h3 class="course-title">Introduction to business and professional development</h3>
+        <p class="course-description">Understand the basics of running businesses and how to correctly network with other individuals.</p>
+        <a class="course-link" href="#">View Course</a>
+      </div>
 
-    <!-- Add more course cards as needed -->
+      <div class="course-card">
+        <h3 class="course-title">Tools for Information Literacy</h3>
+        <p class="course-description">Teaches tools for information literacy including software and networked systems.</p>
+        <a class="course-link" href="#">View Course</a>
+      </div>
+  
+    
 
-  </div>
+</article>
+
+  
+  <footer>
+    <p>&copy; Akhil Motiramani. All rights reserved.</p>
+    <a href="mailto: akhil.motiramani@yahoo.com" class="icon solid fa-envelope"><span class="label">Email Me!</span></a>
+    <p id="modified">Page last modified on: </p> <!-- Add the prefix "Page last modified on: " -->
+    <script>
+      var lastModified = document.lastModified;
+      document.getElementById("modified").innerHTML += lastModified; // Append the last modified date
+    </script>
+  </footer>
+  <script>
+    var slides = document.getElementsByClassName('slide');
+    var slideIndex = 0;
+  
+  
+  </script>
+  
 </body>
 </html>
